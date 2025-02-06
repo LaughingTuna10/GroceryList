@@ -1,0 +1,19 @@
+grocery_list = []
+
+def add_item(item):
+    grocery_list.append(item)
+
+def view_items():
+    print("Grocery List:")
+    for i, item in enumerate(grocery_list, 1):
+        print(f"{i}. {item}")
+
+def remove_item(index):
+    if 0 <= index < len(grocery_list):
+        grocery_list.pop(index)
+
+add_item("Apples")
+add_item("Bread")
+view_items()
+remove_item(0)
+view_items()
